@@ -4,7 +4,7 @@ This repo shows the exception when applying [top level where clause](https://seq
 I used `findAndCountAll` with `offset` and `limit`.
 
 ### Output Query
-`SELECT `Customer`.`customer_id`, `Customer`.`name` FROM `customer` AS `Customer` WHERE `purchases`.`purchase_id` = 2 LIMIT 0, 1;`
+```SELECT 'Customer'.'customer_id', 'Customer'.'name' FROM 'customer' AS 'Customer' WHERE 'purchases'.'purchase_id' = 2 LIMIT 0, 1;```
 
 ### Exception
 `{
@@ -14,16 +14,16 @@ I used `findAndCountAll` with `offset` and `limit`.
   {
     errno: 1,
     code: 'SQLITE_ERROR',
-    sql: 'SELECT `Customer`.`customer_id`, `Customer`.`name` FROM `customer` AS `Customer` WHERE `purchases`.`purchase_id` = 2 LIMIT 0, 1;'
+    sql: SELECT 'Customer'.'customer_id', 'Customer'.'name' FROM 'customer' AS 'Customer' WHERE 'purchases'.'purchase_id' = 2 LIMIT 0, 1;'
   },
   original: 
   [Error: SQLITE_ERROR: no such column: purchases.purchase_id] 
   {
     errno: 1,
     code: 'SQLITE_ERROR',
-    sql: 'SELECT `Customer`.`customer_id`, `Customer`.`name` FROM `customer` AS `Customer` WHERE `purchases`.`purchase_id` = 2 LIMIT 0, 1;'
+    sql: SELECT 'Customer'.'customer_id', 'Customer'.'name' FROM 'customer' AS 'Customer' WHERE 'purchases'.'purchase_id' = 2 LIMIT 0, 1;'
   },
-  sql: 'SELECT `Customer`.`customer_id`, `Customer`.`name` FROM `customer` AS `Customer` WHERE `purchases`.`purchase_id` = 2 LIMIT 0, 1;',
+  sql: SELECT 'Customer'.'customer_id', 'Customer'.'name' FROM 'customer' AS 'Customer' WHERE 'purchases'.'purchase_id' = 2 LIMIT 0, 1;',
   parameters: {}
 }`
 
