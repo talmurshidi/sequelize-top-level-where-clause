@@ -34,6 +34,6 @@ I used `findAndCountAll` with `offset` and `limit`.
 
 ## Version:
 - node v16.14.2
-- sequelize v6.19.0
+- sequelize v6.20.0
 - sequelize-cli v6.4.1
 - sqlite3 v5.0.8
