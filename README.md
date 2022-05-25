@@ -1,5 +1,5 @@
 # sequelize-top-level-where-clause
-This repo shows the exception when applying [top level where clause](https://sequelize.org/docs/v6/advanced-association-concepts/eager-loading/#:~:text=To%20obtain%20top%2Dlevel%20WHERE,a%20top%2Dlevel%20WHERE%20clause.) and using `$nested.column$`.
+This repo shows the exception when applying [top level where clause](https://sequelize.org/docs/v6/advanced-association-concepts/eager-loading/#complex-where-clauses-at-the-top-level) and using `$nested.column$`.
 
 I used `findAndCountAll` with `offset` and `limit`.
 
